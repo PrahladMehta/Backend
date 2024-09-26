@@ -34,6 +34,10 @@ module.exports=async(req,res)=>{
                    const user=await User.findById(order.order_by);
                    const product=await Product.findById(order.product_id);
 
+                   if(!product){
+                        continue;
+                   }
+
                    const image=product.image
                    const quantity=order.count;
                    const title=product.title
