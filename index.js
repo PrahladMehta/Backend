@@ -42,3 +42,5 @@ app.use(prefix,cartRouters);
 app.use(prefix,productRouters);
 app.use(prefix,statusUpdateRoute);
 
+app.use('/',(req,res)=>res.send("<h1>HELLO</h1>")); 
+
